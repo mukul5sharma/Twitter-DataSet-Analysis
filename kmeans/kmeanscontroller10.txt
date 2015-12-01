@@ -1,0 +1,41 @@
+2015-04-24T23:45:35.499Z INFO startExec 'hadoop jar /mnt/var/lib/hadoop/steps/2/kmeansFinal_fat.jar s3://mukulbucket/input s3://mukulbucket/output10'
+2015-04-24T23:45:35.500Z INFO Environment:
+  TERM=linux
+  CONSOLE=/dev/console
+  JAVA_HOME=/usr/lib/jvm/java-7-oracle
+  SHLVL=5
+  HADOOP_IDENT_STRING=hadoop
+  HIVE_HOME=/home/hadoop/hive
+  XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+  HADOOP_ROOT_LOGGER=INFO,DRFA
+  HADOOP_HOME_WARN_SUPPRESS=true
+  PWD=/
+  INIT_VERSION=sysvinit-2.88
+  _=/usr/lib/jvm/java-7-oracle/bin/java
+  NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+  HADOOP_HOME=/home/hadoop
+  LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib:
+  runlevel=2
+  SHELL=/bin/sh
+  VERBOSE=no
+  previous=N
+  CASCADING_SDK_HOME=/home/hadoop/Cascading-2.5-SDK
+  HADOOP_LOGFILE=syslog
+  PATH=/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/hadoop/bin:/home/hadoop/hive/bin:/home/hadoop/Cascading-2.5-SDK/tools/multitool-20140224/bin:/home/hadoop/Cascading-2.5-SDK/tools/load-20140223/bin:/home/hadoop/Cascading-2.5-SDK/tools/lingual-client/bin:/home/hadoop/Cascading-2.5-SDK/driven/bin
+  HADOOP_LOG_DIR=/mnt/var/log/hadoop/steps/2
+  RUNLEVEL=2
+  HADOOP_CLIENT_OPTS=-Djava.io.tmpdir=/mnt/var/lib/hadoop/steps/2/tmp
+  PREVLEVEL=N
+  HOME=/home/hadoop
+  LANG=en_US.UTF-8
+2015-04-24T23:45:35.501Z INFO redirectOutput to /mnt/var/log/hadoop/steps/2/stdout
+2015-04-24T23:45:35.501Z INFO redirectError to /mnt/var/log/hadoop/steps/2/stderr
+2015-04-24T23:45:35.501Z INFO Working dir /mnt/var/lib/hadoop/steps/2
+2015-04-24T23:45:35.527Z INFO ProcessRunner started child process 2819 :
+hadoop    2819  1571  0 23:45 ?        00:00:00 bash /home/hadoop/bin/hadoop jar /mnt/var/lib/hadoop/steps/2/kmeansFinal_fat.jar s3://mukulbucket/input s3://mukulbucket/output10
+2015-04-24T23:45:35.528Z INFO Synchronously wait child process to complete : hadoop jar /mnt/var/lib/hadoop/steps/2/kmeansFi...
+2015-04-25T00:00:35.598Z INFO Process still running
+2015-04-25T00:01:05.600Z INFO waitProcessCompletion ended with exit code 0 : hadoop jar /mnt/var/lib/hadoop/steps/2/kmeansFi...
+2015-04-25T00:01:06.675Z INFO Step created jobs: job_201504242344_0001,job_201504242344_0002,job_201504242344_0003,job_201504242344_0004,job_201504242344_0005,job_201504242344_0006,job_201504242344_0007,job_201504242344_0008,job_201504242344_0009,job_201504242344_0010,job_201504242344_0011,job_201504242344_0012,job_201504242344_0013,job_201504242344_0014,job_201504242344_0015,job_201504242344_0016,job_201504242344_0017
+2015-04-25T00:01:24.722Z INFO Step succeeded with exitCode 0 and took 949 seconds
+

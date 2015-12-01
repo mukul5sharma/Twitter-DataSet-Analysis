@@ -1,0 +1,31 @@
+add jar /home/hadoop/hive/lib/hive_contrib.jar;
+
+CREATE EXTERNAL TABLE userprofile_details(userid String,username String,friendcount int,followercount int, statuscount int,favoritecount int,date int,location String,state String,longitude String,latitude String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',' stored as textfile location 's3://mrprojectsarika/hive/sampleusers';
+
+LOAD DATA INPATH 's3://mrprojectsarika/samplenew.txt' OVERWRITE INTO TABLE userprofile_details;
+
+
+CREATE TABLE network_details(followerid String, userid String)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',' stored as textfile location 's3://mrprojectsarika/hive/samplenetwork';
+
+LOAD DATA INPATH 's3://mrprojectsarika/network_0.txt' INTO TABLE network_details;
+
+CREATE EXTERNAL TABLE intermediate_one(location String, friendcount int,statuscount int, followerid String)
+ROW FORMAT DELIMITED 
+FIELDS TERMINATED BY ',' LOCATION 's3://mrprojectsarika/hive/intermediate_one';
+
+INSERT OVERWRITE TABLE intermediate_one
+select userprofile_details.location, userprofile_details.friendcount, userprofile_details.statuscount, network_details.followerid from userprofile_details join network_details on (userprofile_details.userid = network_details.userid);
+
+
+CREATE EXTERNAL TABLE intermediate_second_now(location String, followercount int, friendcount int,statuscount int)
+ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION 's3://mrprojectsarika/hive/intermediate_second_now';
+
+INSERT OVERWRITE TABLE intermediate_second_now
+select location, count(*) as totalfollowercount, avg(friendcount) as avgfriendcount,avg(statuscount) as avgstatuscount from intermediate_one group by location;
+
+SELECT intermediate_second_now.location, intermediate_second_now.followercount, intermediate_second_now.friendcount, intermediate_second_now.statuscount FROM intermediate_second_now;
+

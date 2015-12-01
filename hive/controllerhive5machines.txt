@@ -1,0 +1,39 @@
+2015-04-24T18:50:17.943Z INFO startExec 'hadoop jar /mnt/var/lib/hadoop/steps/3/script-runner.jar s3://us-west-2.elasticmapreduce/libs/hive/hive-script --run-hive-script --hive-versions 0.11.0.2 --args -f s3://mrprojectsarika/hive/hivescript_AWS.txt -d INPUT=s3://mrprojectsarika/samplenew.txt s3://mrprojectsarika/network_0.txt -d OUTPUT=s3://mrprojectsarika/hivelastop4'
+2015-04-24T18:50:17.945Z INFO Environment:
+  TERM=linux
+  CONSOLE=/dev/console
+  JAVA_HOME=/usr/lib/jvm/java-7-oracle
+  SHLVL=5
+  HADOOP_IDENT_STRING=hadoop
+  HIVE_HOME=/home/hadoop/hive
+  XFILESEARCHPATH=/usr/dt/app-defaults/%L/Dt
+  HADOOP_ROOT_LOGGER=INFO,DRFA
+  HADOOP_HOME_WARN_SUPPRESS=true
+  PWD=/
+  INIT_VERSION=sysvinit-2.88
+  _=/usr/lib/jvm/java-7-oracle/bin/java
+  NLSPATH=/usr/dt/lib/nls/msg/%L/%N.cat
+  HADOOP_HOME=/home/hadoop
+  LD_LIBRARY_PATH=/usr/local/cuda/lib64:/usr/local/cuda/lib:
+  runlevel=2
+  SHELL=/bin/sh
+  VERBOSE=no
+  previous=N
+  CASCADING_SDK_HOME=/home/hadoop/Cascading-2.5-SDK
+  HADOOP_LOGFILE=syslog
+  PATH=/usr/local/cuda/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/hadoop/bin:/home/hadoop/hive/bin:/home/hadoop/Cascading-2.5-SDK/tools/multitool-20140224/bin:/home/hadoop/Cascading-2.5-SDK/tools/load-20140223/bin:/home/hadoop/Cascading-2.5-SDK/tools/lingual-client/bin:/home/hadoop/Cascading-2.5-SDK/driven/bin
+  HADOOP_LOG_DIR=/mnt/var/log/hadoop/steps/3
+  RUNLEVEL=2
+  HADOOP_CLIENT_OPTS=-Djava.io.tmpdir=/mnt/var/lib/hadoop/steps/3/tmp
+  PREVLEVEL=N
+  HOME=/home/hadoop
+  LANG=en_US.UTF-8
+2015-04-24T18:50:17.945Z INFO redirectOutput to /mnt/var/log/hadoop/steps/3/stdout
+2015-04-24T18:50:17.945Z INFO redirectError to /mnt/var/log/hadoop/steps/3/stderr
+2015-04-24T18:50:17.945Z INFO Working dir /mnt/var/lib/hadoop/steps/3
+2015-04-24T18:50:18.001Z INFO ProcessRunner started child process 2762 :
+hadoop    2762  1537  0 18:50 ?        00:00:00 bash /home/hadoop/bin/hadoop jar /mnt/var/lib/hadoop/steps/3/script-runner.jar s3://us-west-2.elasticmapreduce/libs/hive/hive-script --run-hive-script --hive-versions 0.11.0.2 --args -f s3://mrprojectsarika/hive/hivescript_AWS.txt -d INPUT=s3://mrprojectsarika/samplenew.txt s3://mrprojectsarika/network_0.txt -d OUTPUT=s3://mrprojectsarika/hivelastop4
+2015-04-24T18:50:18.004Z INFO Synchronously wait child process to complete : hadoop jar /mnt/var/lib/hadoop/steps/3/script-r...
+2015-04-24T19:03:00.052Z INFO waitProcessCompletion ended with exit code 0 : hadoop jar /mnt/var/lib/hadoop/steps/3/script-r...
+2015-04-24T19:03:01.715Z INFO Step created jobs: job_201504241848_0001,job_201504241848_0002,job_201504241848_0003
+2015-04-24T19:03:06.838Z INFO Step succeeded with exitCode 0 and took 768 seconds
